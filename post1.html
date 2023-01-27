@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education Website</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <!-- NAVIGATION -->
+    <nav>
+        <img src="images/logo.svg" alt="">
+        <div class="navigation">
+            <ul>
+                <i id="menu-close" class="fas fa-times"></i>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a class="active" href="blog.html">Blog</a></li>
+                <li><a href="course.html">Courses</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <img id="menu-btn" src="images/menu.png">   <!-- Hamburger menu--> 
+
+            <div  class="fas fa-user" id="login-btn"></div>
+            <form class="login-form">
+                <h3>Login Now</h3>
+                <input type="email" placeholder="Your Email" class="box" required>
+                <input type="password" placeholder="Your Password" class="box" minlength="8" required>
+                <p>Forget password <a href="#">Click Here</a></p>
+                <p>Don't have account <a href="#">Create Now</a></p>
+                <input type="submit" value="Login Now" class="login-now">
+            </form>
+        </div>
+    </nav>
+
+    <!-- HOME -->
+    <section id="about-home">
+        <h2>Blog !!</h2>
+    </section>
+
+    <!-- Blog -->
+    <section id="blog-container">
+        <div class="blogs blogpost">
+            <div class="posts">
+                <img src="images/b1.jpg">
+                <h3>Learn Web Develoment In Easiest Way</h3>
+                <p>Web development is the building and maintenance of websites; it’s the work that happens behind the scenes to make
+                    a website look great, work fast and perform well with a seamless user experience.
+                    Web developers, or ‘devs’, do this by using a variety of coding languages. The languages they use depends on 
+                    the types of tasks they are preforming and the platforms on which they are working.
+                    Web development skills are in high demand worldwide and well paid too – making development a great career option. 
+                    The field of web development is generally broken down into front-end (the user-facing side) and back-end (the server side). Let’s delve into the details.
+                    <br><br>
+                    All this may sound daunting at first, but you don’t need to know everything at once. 
+                    You will grow your knowledge progressively. And things will begin to click. 
+                    The great news is, learning to become a developer is easily accessible and affordable. 
+                    This is especially true with OpenClassrooms. If both Frontend and Backend development appeal to you, you could 
+                    consider becoming a Full-Stack Developer.
+                    Full-stackers take care of both the front-end and the back-end, and need to know how the web works on all levels, 
+                    in order to determine how the client- and server-sides will relate. Naturally working up to this level of expertise 
+                    will take longer, as there is more to learn.
+                    <br><br>
+                    The first step is to decide which aspect of web development interests you and 
+                    then start out with one programming language.
+                    For example, if you are interested in front end you can start by learning some HTML and CSS, 
+                    then start working on projects as soon as you are comfortable with the basics. Our Web Developer Program is a perfect 
+                    fit for this route. But others may suite you as well.
+                    It also helps to join a discussion group or community of other web developers, so that you can troubleshoot, discuss 
+                    ideas and get inspiration. That’s why you become part of the OpenClassrooms community when you enroll in a program on the site.
+                </p>
+                <a href="blog.html">Read Next ?</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-col">
+            <h3>Top Products</h3>
+            <li>Manage Reputation</li>
+            <li>Power Tools</li>
+            <li>Managed Website</li>
+            <li>Marketing Service</li>
+        </div>
+        <div class="footer-col">
+            <h3>Quick Links</h3>
+            <li>Jobs</li>
+            <li>Brand Assests</li>
+            <li>Investor Relations</li>
+            <li>Terms of Service</li>
+        </div>
+        <div class="footer-col">
+            <h3>Features</h3>
+            <li>Manage Reputation</li>
+            <li>Power Tools</li>
+            <li>Managed Website</li>
+            <li>Marketing Service</li>
+        </div>
+        <div class="footer-col">
+            <h3>Resources</h3>
+            <li>Guides</li>
+            <li>Research</li>
+            <li>Experts</li>
+            <li>Marketing Service</li>
+        </div>
+        <div class="footer-col">
+            <h3>Newsletter</h3>
+            <p>You can trust us. We only send promo offers.</p>
+            <div class="subscribe">
+                <input type="text" placeholder="Your Email Address">
+                <a href="#" class="yellow">SUBSCRIBE</a>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>Copyright ©2021 All Rights Reseved. This template is made by Suneha Suman</p>
+            <div class="pro-links">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-linkedin-in"></i>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        $('#menu-btn').click(function(){
+            $('nav .navigation ul').addClass('active')
+        });
+        $('#menu-close').click(function(){
+            $('nav .navigation ul').removeClass('active')
+        });
+
+        let loginForm = document.querySelector('.login-form');
+
+        document.querySelector('#login-btn').onclick = () =>{
+        loginForm.classList.toggle('active');
+        }
+    </script>
+      
+</body>
+</html>
